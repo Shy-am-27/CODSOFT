@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #ffffff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #0077cc;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+    nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(to right, #ffffff, #f0f8ff);
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      color: #005fa3;
+      transform: scale(1.1);
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #0077cc;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .about {
+      background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+      border-radius: 15px;
+      padding: 3rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .about img {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    .about img:hover {
+      transform: scale(1.1);
+    }
+    .skills ul, .projects .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .skills li, .projects .project-item {
+      list-style: none;
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skills li:hover, .projects .project-item:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: scale(1.05);
+    }
+    .projects img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .projects p {
+      margin-top: 0.5rem;
+    }
+    .resume a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #0077cc;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .resume a:hover {
+      background: #005fa3;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #eaeaea;
+      color: #666;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SHYAM</h1>
+    <p>Creative Developer | UI/UX Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about reveal">
+    <h2>About Me</h2>
+    <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="John Doe" />
+    <p>Hello! I’m a front-end developer with a strong passion for crafting engaging, user-centric digital experiences. I specialize in responsive web design and interactive UI/UX. My goal is to make the web more intuitive and beautiful, one pixel at a time.</p>
+    <p>When I’m not coding, I enjoy photography, gaming, and exploring new tech trends.</p>
+  </section>
+
+  <section id="skills" class="skills reveal">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Tailwind CSS</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Design</li>
+      <li>Figma to Code</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects reveal">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Portfolio Website</h3>
+        <img src="https://picsum.photos/500/250?random=1" alt="Portfolio Website">
+        <p>A personal portfolio website designed to showcase skills and projects. Built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-item">
+        <h3>Weather App</h3>
+        <img src="https://picsum.photos/500/250?random=2" alt="Weather App">
+        <p>Weather forecast application using the OpenWeather API with responsive design and animated UI.</p>
+      </div>
+      <div class="project-item">
+        <h3>Task Manager</h3>
+        <img src="https://picsum.photos/500/250?random=3" alt="Task Manager">
+        <p>A productivity tool for task tracking, built with React and localStorage for persistence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume reveal">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download>Download My Resume (PDF)</a>
+  </section>
+
+  <section id="contact" class="contact reveal">
+    <h2>Contact Me</h2>
+    <p>Email: shyam@gmail.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>LinkedIn: linkedin.com/in/Shyam</p>
+    <p>GitHub: github.com/Shyam</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shyam All rights reserved.</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+      const windowHeight = window.innerHeight;
+      reveals.forEach((el) => {
+        const revealTop = el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - 50) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
